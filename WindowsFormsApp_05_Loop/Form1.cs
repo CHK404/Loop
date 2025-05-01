@@ -77,7 +77,6 @@ namespace WindowsFormsApp_05_Loop
             //Q2) 1부터 100까지의 수중에 3의 배수지만 5의 배수는 아닌수 출력
             //ㄴ 마지막에 총합 출력
 
-            int end = 100;
             int total = 0;
             int count = 0;
 
@@ -151,9 +150,96 @@ namespace WindowsFormsApp_05_Loop
                     Console.Write($"*");
                 }
             }
+
+
+
+            #endregion
+
+            #region #2 배열 반복문
+
+            /*
+             * 배열 반복문을 사용하는 이유
+             * 하나하나 출력하기에 비효율적
+             * 
+             * Length: 배열의 크기
+             */
+
+            //[Before]
+            string[] fruits = { "사과", "바나나", "포도", "딸기" };
+            Console.WriteLine(fruits[0]);
+            Console.WriteLine(fruits[1]);
+            Console.WriteLine(fruits[2]);
+            Console.WriteLine(fruits[3]);
+            Console.WriteLine(fruits.Length);
+
+            Console.WriteLine("-----------------------------");
+
+            //[After]
+            string[] fruits2 = { "사과", "바나나", "포도", "딸기" };
+            for (int i = 0; i < fruits2.Length; i++)
+            {
+                Console.WriteLine(fruits2[i]);
+            }
+
+            Console.WriteLine("-----------------------------");
+
+            //#foreach문 사용
+            /*
+             * ㄴ 배열의 모든 항목을 처음부터 끝까지 하나씩 꺼내며 반복 실행하는 문법
+             * ㄴ 배열을 순회하면서 각 요소에 동일한 작업을 실행할 때 사용
+             * ㄴ 순서가 있는 구조 반복에 적합
+             * 
+             * 구조
+             * foreach (자료형 변수명 in 배열이름)
+             * {
+             *      //배열의 항목 하나씩 사용
+             * }
+             */
+
+            //위 예제 foreach 버전
+            string[] fruits3 = { "사과", "바나나", "포도", "딸기" };
+            foreach (string fruit in fruits)
+            {
+                Console.WriteLine(fruit);
+            }
+
+            //for문 버전
+            int[] scores = { 85, 98, 78, 92, 88 };
+
+            int sum4 = 0;
+            for (int i = 0; i < scores.Length; i++)
+            {
+                sum4 += scores[i];
+            }
+
+            double average = (double)sum4 / scores.Length;
+
+            Console.WriteLine("총합: " + sum4);
+            Console.WriteLine("평균: " + average);
+
+            Console.WriteLine("-----------------------------");
+
+            //foreach버전
+
+            int[] scores2 = { 85, 98, 78, 92, 88 };
+
+            int sum5 = 0;
+            foreach (int score in scores2)
+            {
+                sum5 += score;
+            }
+
+            double average2 = (double)sum5 / scores2.Length;
+
+            Console.WriteLine("총합: " + sum5);
+            Console.WriteLine("평균: " + average2);
+
             #endregion
 
             #endregion
+            //실습: 가짜 성적표 만들기
+
+
 
         }
     }
