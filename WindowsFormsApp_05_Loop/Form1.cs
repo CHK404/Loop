@@ -72,6 +72,27 @@ namespace WindowsFormsApp_05_Loop
                 Console.WriteLine(eSum + "\r\n");
             }
 
+            Console.WriteLine("-----------------------------");
+
+            //Q2) 1부터 100까지의 수중에 3의 배수지만 5의 배수는 아닌수 출력
+            //ㄴ 마지막에 총합 출력
+
+            int end = 100;
+            int total = 0;
+
+            for (int i = 1; i <= 100; i++)
+            {
+                if (i % 3 == 0)
+                {
+                    if (i % 5 != 0)
+                    {
+                        Console.WriteLine(i + "\r\n");
+                        total += i;
+                    }
+                }
+            }
+
+            Console.WriteLine(total);
             #endregion
 
             #endregion
