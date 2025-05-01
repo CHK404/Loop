@@ -135,6 +135,22 @@ namespace WindowsFormsApp_05_Loop
                     Console.Write($"*");
                 }
             }
+
+            Console.WriteLine("-----------------------------");
+
+            //Q5) 별 찍기 2
+            for (int i = 1; i <= 7; i+=2)
+            {
+                Console.Write("\r\n");
+                for (int k = 5; k >= i; k-=2)
+                {
+                    Console.Write($" ");
+                }
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write($"*");
+                }
+            }
             #endregion
 
             #endregion
