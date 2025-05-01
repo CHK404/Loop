@@ -79,6 +79,7 @@ namespace WindowsFormsApp_05_Loop
 
             int end = 100;
             int total = 0;
+            int count = 0;
 
             for (int i = 1; i <= 100; i++)
             {
@@ -88,11 +89,12 @@ namespace WindowsFormsApp_05_Loop
                     {
                         Console.WriteLine(i + "\r\n");
                         total += i;
+                        count += 1;
                     }
                 }
             }
-
-            Console.WriteLine(total);
+            Console.WriteLine("갯수: " + count + "\r\n");
+            Console.WriteLine("총합: " + total + "\r\n");
             #endregion
 
             #endregion
