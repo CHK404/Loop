@@ -119,6 +119,22 @@ namespace WindowsFormsApp_05_Loop
                     Console.WriteLine($"{i} x {j} = {multi}");
                 }
             }
+
+            Console.WriteLine("-----------------------------");
+
+            //Q4) 별 찍기
+            for (int i = 1; i <= 4; i++)
+            {
+                Console.Write("\r\n");
+                for (int k = 3; k >= i; k--)
+                {
+                    Console.Write($" ");
+                }
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write($"*");
+                }
+            }
             #endregion
 
             #endregion
