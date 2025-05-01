@@ -1,0 +1,81 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApp_05_Loop
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+
+            #region 반복문
+
+            #region #1 일반 반복문
+
+            /*
+             * -어떤 코드를 정해진 횟수만큼 반복 실행할 때 사용
+             * 
+             * 구조
+             * for(초기식; 조건식; 증감식)
+             * {
+             *      반복할 코드
+             * }
+             * 
+             * 초기식: 변수 선언 혹은 초기화
+             * 조건식: 반복할 조건 (ex. true면 계속 진행)
+             * 증감식: 변수 값을 변화시켜 반복 실행 제어 -> ++/--
+             */
+
+            //Ex1) 0~5 출력
+            for(int i = 0; i <= 5; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine("-----------------------------");
+            //Ex2) 5~1출력
+            for(int i = 5; i >= 1; i--)
+            {
+                Console.WriteLine(i);
+            }
+
+            Console.WriteLine("-----------------------------");
+
+            //Ex3) 1부터 n까지의 합 구하기
+            int n = 10;
+            int sum = 0;
+
+            for(int i = 1; i <= n; i++)
+            {
+                sum += i;
+                Console.WriteLine("현재 i의 값: " + i + "\r\n" + "현재 합계: " + sum + "\r\n");
+            }
+
+            //Q1) 1 ~ 20 중에 짝수 숫자들의 합
+            int num = 20;
+            int eSum = 0;
+
+            for (int i = 1; i <= num; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    eSum += i;
+                }
+                Console.WriteLine(eSum + "\r\n");
+            }
+
+            #endregion
+
+            #endregion
+
+        }
+    }
+}
