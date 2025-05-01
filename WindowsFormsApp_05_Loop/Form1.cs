@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp_05_Loop
 {
@@ -237,10 +238,30 @@ namespace WindowsFormsApp_05_Loop
             #endregion
 
             #endregion
-            //실습: 가짜 성적표 만들기
+            
+        }
 
-
-
+        //실습: for문/가짜 성적표 만들기
+        private void button_submit_Click(object sender, EventArgs e)
+        {
+            textBox_output.Text = "";
+            string input = textBox_input.Text;
+            bool toF = int.TryParse(input, out int student);
+            if (toF) 
+            {
+                Random score = new Random();
+                int[] arrayScore = new int[student];
+                for (int i = 0; i < student; i++)
+                {
+                    int s = score.Next(100);
+                    arrayScore[i] = s;
+                    textBox_output.Text += $"학생{i + 1}: {arrayScore[i]}\r\n";
+                }
+            }
+            else
+            {
+                textBox_output.Text = "땡";
+            }
         }
     }
 }

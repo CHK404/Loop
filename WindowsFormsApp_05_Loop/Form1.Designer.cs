@@ -49,6 +49,7 @@
             this.button_submit.Text = "Submit";
             this.button_submit.UseVisualStyleBackColor = true;
             this.button_submit.UseWaitCursor = true;
+            this.button_submit.Click += new System.EventHandler(this.button_submit_Click);
             // 
             // textBox_output
             // 
