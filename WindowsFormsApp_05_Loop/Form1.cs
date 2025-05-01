@@ -95,6 +95,30 @@ namespace WindowsFormsApp_05_Loop
             }
             Console.WriteLine("갯수: " + count + "\r\n");
             Console.WriteLine("총합: " + total + "\r\n");
+
+            Console.WriteLine("-----------------------------");
+
+            //Ex4) 중첩 for문
+            for (int i = 1; i <= 3; i++)
+            {
+                for(int j = 1; j <= 2; j++)
+                {
+                    Console.WriteLine($"i = {i}, j = {j}");
+                }
+            }
+
+            Console.WriteLine("-----------------------------");
+
+            //Q3) 구구단 2단~9단 출력
+
+            for (int i = 2; i <= 9; i++)
+            {
+                for (int j = 1; j <= 9; j++)
+                {
+                    int multi = i * j;
+                    Console.WriteLine($"{i} x {j} = {multi}");
+                }
+            }
             #endregion
 
             #endregion
