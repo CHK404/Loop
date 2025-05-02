@@ -238,7 +238,99 @@ namespace WindowsFormsApp_05_Loop
             #endregion
 
             #endregion
-            
+
+            #region While문
+
+            /* 
+             * 조건이 참일 동안 반복하는 반복문
+             * 조건이 거짓이 될 때 까지 무한 반복
+             * 
+             * 구조
+             * while(조건식)
+             * {
+             *      조건이 참일 경우 실행할 코드
+             * }
+             */
+
+            Console.Clear(); //콘솔창 초기화
+
+            int count2 = 0;
+            while (count2 < 100)
+            {
+                Console.WriteLine(count2);
+                count2++;
+            }
+
+            Console.WriteLine("-----------------------------");
+
+            //ex) 1~5 출력
+
+            int a = 1;
+
+            while (a <= 5)
+            {
+                Console.WriteLine(a);
+                a++;
+            }
+
+            //ex) 무한루프
+
+            //bool run = true;
+            //while(run)
+            //{
+            //  Console.WriteLine("무한");
+            //}
+
+            //ex) 무한루프2 (벗어나기)
+
+            int idx = 0;
+            while (true)
+            {
+                idx += 2;
+                if(idx == 10)
+                {
+                    break;
+                }
+                Console.WriteLine($"{idx}");
+            }
+
+            Console.WriteLine($"{idx}");
+            Console.WriteLine("-----------------------------");
+
+            #endregion
+
+            #region break & continue
+
+            //반복문에서 사용되는 제어문
+
+            //#break
+            //ㄴ 반복문을 완전히 중단하고 빠져나온다
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 5)
+                {
+                    break;
+                }
+                Console.WriteLine($"{i}");
+            }
+
+            Console.WriteLine("-----------------------------");
+
+            //#continue
+            //ㄴ 현재 반복을 중지하고 다음 반복으로 넘어감
+            //ㄴ 이번회차 건너뛰기
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 5)
+                {
+                    continue;
+                }
+                Console.WriteLine($"{i}");
+            }
+
+            #endregion
+
         }
 
         //실습: for문/가짜 성적표 만들기
